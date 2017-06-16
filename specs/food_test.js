@@ -17,6 +17,10 @@ describe("Food", function(){
     assert.strictEqual(5, food.replenishmentVal);
   });
 
+  it("Should have a poisoned status defaulting false", function(){
+    assert.strictEqual(false, food.poisoned);
+  })
+
 
 
 

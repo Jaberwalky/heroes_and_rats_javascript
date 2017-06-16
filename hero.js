@@ -14,7 +14,9 @@ Hero.prototype = {
   },
 
   eat: function(food){
+    if (!food.poisoned){
     food.name === this.favouriteFood ? this.health += ( food.replenishmentVal * 1.5 ) : this.health += food.replenishmentVal;
+    } else { this.health -= 5 };
   },
   addTask: function(task){
     this.tasks.push(task);

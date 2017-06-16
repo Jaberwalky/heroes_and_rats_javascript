@@ -96,7 +96,11 @@ describe("Hero", function(){
     assert.deepEqual([task3], hero.showTasksBy("complete"));
   });
 
-  // difficulty/urgency/reward
+  it("Should lose health when poisoned by food", function(){
+    banana.poisoned = true;
+    hero.eat(banana);
+    assert.strictEqual(5, hero.health);
+  })
 
 
 
